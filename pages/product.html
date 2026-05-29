@@ -8,11 +8,6 @@
 </head>
 <body>
 
-  <div class="promo-banner">
-    We Now Offer Free Shipping on All Orders above $39
-    <a href="catalog.html">Shop Now</a>
-  </div>
-
   <header class="header">
     <div class="header-inner">
       <a href="../index.html" class="logo">
@@ -38,6 +33,14 @@
       </nav>
     </div>
   </header>
+
+  <nav class="breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="catalog.html">All Products</a>
+    <span>›</span>
+    <span id="breadcrumb-name">Product</span>
+  </nav>
 
   <section class="product-detail" id="product-detail">
     <div class="product-detail-image">
@@ -77,6 +80,7 @@
         <p>📍 5900 Balcones Drive #23879, Austin, Texas 78731</p>
       </div>
     </div>
+
     <div class="footer-bottom">
       <p>&copy; 2025 Stellar Pacific. All rights reserved.</p>
       <div class="payment-methods">
@@ -120,6 +124,7 @@
 
     if (product) {
       document.title = product.name + ' - Stellar Pacific';
+      document.getElementById('breadcrumb-name').textContent = product.name;
       document.getElementById('product-img').src = product.image;
       document.getElementById('product-img').alt = product.name;
       document.getElementById('product-title').textContent = product.name;
