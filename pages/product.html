@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - Stellar Pacific</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <div class="promo-banner">
+    We Now Offer Free Shipping on All Orders above $39
+    <a href="catalog.html">Shop Now</a>
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.jpg" alt="Stellar Pacific">
+      </a>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="catalog.html">Product Catalog</a>
+        <a href="contact.html">Contact Us</a>
+        <div class="nav-dropdown">
+          <a href="#">More ▾</a>
+          <div class="dropdown-menu">
+            <a href="shipping-policy.html">Shipping Policy</a>
+            <a href="refund-policy.html">Refund Policy</a>
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="accessibility.html">Accessibility Statement</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-detail" id="product-detail">
+    <div class="product-detail-image">
+      <img id="product-img" src="" alt="">
+    </div>
+    <div class="product-detail-info">
+      <h1 id="product-title"></h1>
+      <div class="product-detail-price" id="product-price"></div>
+      <p class="product-detail-desc" id="product-desc"></p>
+      <ul class="product-detail-features" id="product-features"></ul>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <img src="../images/logo.jpg" alt="Stellar Pacific" class="footer-logo">
+        <p>Quality products for every need, delivered to your door with free shipping on orders above $39.</p>
+        <div class="footer-social">
+          <a href="#"><img src="../images/icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="../images/icons/instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <p><a href="../index.html">Home</a></p>
+        <p><a href="catalog.html">Product Catalog</a></p>
+        <p><a href="contact.html">Contact Us</a></p>
+        <p><a href="shipping-policy.html">Shipping Policy</a></p>
+        <p><a href="refund-policy.html">Refund Policy</a></p>
+      </div>
+      <div class="footer-col footer-contact">
+        <h3>Contact Us</h3>
+        <p>📞 +1 (737) 283-8693</p>
+        <p>✉️ admin@stellar-pacific.com</p>
+        <p>📍 5900 Balcones Drive #23879, Austin, Texas 78731</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Stellar Pacific. All rights reserved.</p>
+      <div class="payment-methods">
+        <img src="../images/payment-methods.png" alt="Payment Methods">
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    var products = {
+      "shower-caddy": { name: "Shower Caddy Rustproof", price: "$190.99", image: "../images/products/shower-caddy.png", desc: "A rustproof shower caddy built for daily use. Keeps your bathroom organized and clutter-free.", features: ["Compact design to save space", "Durable rustproof build", "Modern look that fits most styles", "Great for home or travel"] },
+      "air-fryer-liners": { name: "Air Fryer Liners 100 Pack", price: "$148.55", image: "../images/products/air-fryer-liners.png", desc: "100-pack air fryer liners designed for easy cooking and cleanup. Compatible with most air fryer models.", features: ["Non-stick surface", "Food-grade material", "Easy to clean and dispose", "Compatible with most air fryers"] },
+      "electric-kettle": { name: "Electric Kettle 1.7L", price: "$183.16", image: "../images/products/electric-kettle.png", desc: "A 1.7L electric kettle with fast boiling and auto shut-off. Perfect for tea, coffee, and more.", features: ["Fast boiling technology", "Auto shut-off for safety", "1.7 liter capacity", "Great for home or office"] },
+      "ceramic-mug": { name: "Ceramic Coffee Mug 350ml", price: "$65.45", image: "../images/products/ceramic-mug.png", desc: "A 350ml ceramic coffee mug with a comfortable grip. Perfect for your morning coffee or tea.", features: ["350ml capacity", "Comfortable handle grip", "Dishwasher safe", "Modern minimalist design"] },
+      "microfiber-cloths": { name: "Microfiber Cleaning Cloths 12 Pack", price: "$209.19", image: "../images/products/microfiber-cloths.png", desc: "12-pack of premium microfiber cleaning cloths. Super absorbent and lint-free for all surfaces.", features: ["Super absorbent material", "Lint-free cleaning", "Reusable and machine washable", "Works on all surfaces"] },
+      "phone-tripod": { name: "Portable Phone Tripod Stand", price: "$131.19", image: "../images/products/phone-tripod.png", desc: "A portable phone tripod stand perfect for video calls, content creation, and photography.", features: ["Adjustable height", "Universal phone compatibility", "Lightweight and portable", "Stable base design"] },
+      "hdmi-cable": { name: "HDMI Cable 2m High Speed", price: "$173.74", image: "../images/products/hdmi-cable.png", desc: "A 2-meter high-speed HDMI cable supporting 4K resolution. Perfect for TVs, monitors, and gaming.", features: ["4K resolution support", "2 meter length", "Gold-plated connectors", "Universal compatibility"] },
+      "smart-plug": { name: "Smart Plug Wi-Fi 2 Pack", price: "$219.70", image: "../images/products/smart-plug.png", desc: "A 2-pack Wi-Fi smart plug for controlling your devices remotely. Compatible with voice assistants.", features: ["Wi-Fi enabled", "Voice assistant compatible", "Remote control via app", "Energy monitoring"] },
+      "lunch-bag": { name: "Insulated Lunch Bag", price: "$241.83", image: "../images/products/lunch-bag.png", desc: "An insulated lunch bag that keeps food fresh for hours. Durable build with multiple compartments.", features: ["Keeps food hot or cold", "Multiple compartments", "Durable and easy to clean", "Great for work or school"] },
+      "resistance-bands": { name: "Resistance Bands Set 5 levels", price: "$133.75", image: "../images/products/resistance-bands.png", desc: "A set of 5 resistance bands with varying tension levels. Perfect for home workouts and rehabilitation.", features: ["5 resistance levels", "Latex-free material", "Portable carry bag included", "Suitable for all fitness levels"] },
+      "yoga-mat": { name: "Yoga Mat Non-Slip 6mm", price: "$66.10", image: "../images/products/yoga-mat.png", desc: "A 6mm non-slip yoga mat built for daily use. Suitable for yoga, pilates, and floor exercises.", features: ["Compact design to save space", "Durable build for everyday use", "Modern look that fits most styles", "Great for home, office, or travel"] },
+      "led-desk-lamp": { name: "LED Desk Lamp with USB Port", price: "$210.80", image: "../images/products/led-desk-lamp.png", desc: "An LED desk lamp with built-in USB charging port. Adjustable brightness for optimal lighting.", features: ["Built-in USB charging port", "Adjustable brightness levels", "Energy efficient LED", "Flexible arm design"] },
+      "spatula-set": { name: "Kitchen Silicone Spatula Set 5 pcs", price: "$25.15", image: "../images/products/spatula-set.png", desc: "A 5-piece kitchen silicone spatula set. Heat-resistant and non-stick friendly for all your cooking needs.", features: ["5-piece set", "Heat-resistant silicone", "Non-stick friendly", "Dishwasher safe"] },
+      "frying-pan": { name: "Non-Stick Frying Pan 28cm", price: "$221.50", image: "../images/products/frying-pan.png", desc: "A 28cm non-stick frying pan with even heat distribution. Perfect for everyday cooking.", features: ["28cm diameter", "Premium non-stick coating", "Even heat distribution", "Comfortable handle grip"] },
+      "bluetooth-earbuds": { name: "Bluetooth Earbuds with Charging Case", price: "$174.58", image: "../images/products/bluetooth-earbuds.png", desc: "Wireless Bluetooth earbuds with a compact charging case. Crystal clear audio and long battery life.", features: ["Bluetooth 5.0 connectivity", "Compact charging case", "Long battery life", "Crystal clear audio"] },
+      "usb-c-charger": { name: "USB-C Fast Charger 30W", price: "$206.51", image: "../images/products/usb-c-charger.png", desc: "A 30W USB-C fast charger compatible with most modern devices. Compact and travel-friendly.", features: ["30W fast charging", "USB-C universal connector", "Compact travel design", "Overcharge protection"] },
+      "wireless-mouse": { name: "Wireless Ergonomic Mouse", price: "$247.91", image: "../images/products/wireless-mouse.png", desc: "A wireless ergonomic mouse built for daily use. Designed for comfort during long work sessions.", features: ["Works well as a practical gift", "Lightweight and easy to carry", "Easy to clean and maintain", "Great for home, office, or travel"] },
+      "water-bottle": { name: "Stainless Steel Water Bottle 1L", price: "$60.45", image: "../images/products/water-bottle.png", desc: "A 1-liter stainless steel water bottle. Keeps drinks hot or cold for hours with double-wall insulation.", features: ["1 liter capacity", "Double-wall insulation", "Leak-proof lid", "BPA-free material"] },
+      "ceramic-vase": { name: "Ceramic Flower Vase", price: "$270.00", image: "../images/products/ceramic-vase.jpg", desc: "A beautifully crafted ceramic flower vase. Perfect as a centerpiece or decorative accent for any room.", features: ["Premium ceramic construction", "Elegant minimalist design", "Suitable for fresh or dried flowers", "Easy to clean"] },
+      "tote-bag": { name: "Minimalist Tote Bag", price: "$20.00", image: "../images/products/tote-bag.jpg", desc: "A minimalist tote bag perfect for everyday use. Spacious interior with durable construction.", features: ["Spacious interior", "Durable construction", "Minimalist design", "Comfortable straps"] },
+      "eye-serum": { name: "Hydrating Eye Serum", price: "$56.00", image: "../images/products/eye-serum.jpg", desc: "A hydrating eye serum that revitalizes and refreshes tired eyes. Lightweight formula absorbs quickly.", features: ["Lightweight formula", "Quick absorption", "Hydrating ingredients", "Suitable for all skin types"] },
+      "golf-sweater": { name: "Knitted Golf Sweater", price: "$275.00", image: "../images/products/golf-sweater.jpg", desc: "A knitted golf sweater combining style and comfort. Perfect for the course or casual wear.", features: ["Premium knit fabric", "Comfortable fit", "Stylish design", "Machine washable"] },
+      "round-eyeglasses": { name: "Round Eyeglasses", price: "$80.00", image: "../images/products/round-eyeglasses.jpg", desc: "Classic round eyeglasses with a timeless design. Lightweight frame for all-day comfort.", features: ["Classic round design", "Lightweight frame", "All-day comfort", "Prescription-ready"] },
+      "essential-oil-diffuser": { name: "Essential Oil Diffuser", price: "$119.00", image: "../images/products/essential-oil-diffuser.jpg", desc: "An essential oil diffuser that fills your space with soothing aromas. Features multiple mist settings.", features: ["Multiple mist settings", "Quiet operation", "Auto shut-off", "LED mood lighting"] }
+    };
+
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('id');
+    var product = products[id];
+
+    if (product) {
+      document.title = product.name + ' - Stellar Pacific';
+      document.getElementById('product-img').src = product.image;
+      document.getElementById('product-img').alt = product.name;
+      document.getElementById('product-title').textContent = product.name;
+      document.getElementById('product-price').textContent = product.price;
+      document.getElementById('product-desc').textContent = product.desc;
+      var featuresEl = document.getElementById('product-features');
+      product.features.forEach(function(f) {
+        var li = document.createElement('li');
+        li.textContent = f;
+        featuresEl.appendChild(li);
+      });
+    } else {
+      document.getElementById('product-detail').innerHTML = '<div style="text-align:center;padding:60px 20px;grid-column:1/-1"><h2>Product not found</h2><p style="margin-top:12px"><a href="catalog.html" style="color:#1a73e8">Browse all products</a></p></div>';
+    }
+  </script>
+</body>
+</html>
